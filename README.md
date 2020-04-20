@@ -18,5 +18,7 @@ $ gradle test
 ### Unit tests [link](src/test/java/com/snooper/service)  
 ### Integration tests [link](src/test/java/com/snooper/ApplicationIntTests.java)
 
+![test result](test_result.png)
+
 ## TODO
 1. add more integration tests
