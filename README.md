@@ -1,14 +1,20 @@
 # Robotic Rover
 
 ## Problem definition
-See [link](Mars%20rover.docx)
+A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This plateau, which is curiously rectangular, must be navigated by the rovers so that their on-board cameras can get a complete view of the surrounding terrain to send back to Earth...
+
+See full requirement in [link](Mars%20rover.docx)
 
 ## Prerequisites
  - Java 8
- - Gradle
+ - Gradle 6.3
 
-## Running
+## Build
 Main application [Application](src/main/java/com/snooper/Application.java)
+
+```
+$ gradle build
+```
 
 ## Test
 ```
