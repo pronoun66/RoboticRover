@@ -26,5 +26,14 @@ $ gradle test
 
 ![test result](test-result.png)
 
+## Code Structure
+In `src` folder
+`Application` main function  
+`/constant` enum types  
+`/dto` models  
+`/exception` exceptions  
+`/service` logic implementation  
+
+
 ## TODO
-1. add more integration tests
+1. Add more integration edge case tests

@@ -33,31 +33,16 @@ public enum Direction {
         return leftTurn;
     }
 
-    public void setLeftTurn(Direction leftTurn) {
-        this.leftTurn = leftTurn;
-    }
-
     public Direction getRightTurn() {
         return rightTurn;
-    }
-
-    public void setRightTurn(Direction rightTurn) {
-        this.rightTurn = rightTurn;
     }
 
     public int getMoveX() {
         return moveX;
     }
 
-    public void setMoveX(int moveX) {
-        this.moveX = moveX;
-    }
-
     public int getMoveY() {
         return moveY;
     }
 
-    public void setMoveY(int moveY) {
-        this.moveY = moveY;
-    }
 }
