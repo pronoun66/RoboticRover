@@ -24,7 +24,7 @@ class ApplicationIntTests {
 	}
 
 	@Test
-	@DisplayName("Application should return OutOfBoundaryException")
+	@DisplayName("Application should throw OutOfBoundaryException")
 	void applicationShouldReturnOutOfBoundaryException() {
 		String result = application.roboticRoverNavigatePlateau(
 				"5 5\n"
