@@ -30,6 +30,7 @@ public class Application {
         List<String> results = new ArrayList<>();
         Plateau plateau = commandHandler.parsePlateau(commands[0]);
 
+        // TODO can use parallel here
         for (int i = 1; i < commands.length; i += 2) {
             RoboticRover roboticRover = commandHandler.parseRoboticRover(commands[i]);
             List<Action> actions = commandHandler.parseActions(commands[i + 1]);
