@@ -22,26 +22,47 @@ public class CommandHandlerImpl implements CommandHandler {
             throw new IllegalArgumentException("Invalid command for plateau coordinates");
         }
 
-        int maxX = Integer.valueOf(strings[0]);
-        int maxY = Integer.valueOf(strings[1]);
+        int maxX = 0;
+        int maxY = 0;
+        
+        try {
+            maxX = Integer.valueOf(strings[0]);
+            maxY = Integer.valueOf(strings[1]);
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("Invalid plateau coordinates");
+        }
+
         return new Plateau(0, 0, maxX, maxY);
     }
 
     @Override
     public RoboticRover parseRoboticRover(String command) {
         if (command == null) {
-            throw new IllegalArgumentException("Invalid command for roboticRover coordinates");
+            throw new IllegalArgumentException("Invalid command for roboticRover");
         }
 
         String[] strings = command.split(" ");
 
         if (strings.length != 3) {
-            throw new IllegalArgumentException("Invalid command for roboticRover coordinates");
+            throw new IllegalArgumentException("Invalid command for roboticRover");
         }
 
-        int x = Integer.valueOf(strings[0]);
-        int y = Integer.valueOf(strings[1]);
-        Direction direction = Direction.valueOf(strings[2]);
+        int x;
+        int y;
+
+        try {
+            x = Integer.valueOf(strings[0]);
+            y = Integer.valueOf(strings[1]);
+        } catch (IllegalArgumentException exception) {
+            throw new IllegalArgumentException("Invalid roboticRover coordinates");
+        }
+
+        Direction direction;
+        try {
+            direction = Direction.valueOf(strings[2]);
+        } catch (IllegalArgumentException exception) {
+            throw new IllegalArgumentException("Invalid direction");
+        }
 
         return new RoboticRover(new Coordinate(x, y), direction);
     }
@@ -54,7 +75,12 @@ public class CommandHandlerImpl implements CommandHandler {
 
         List<Action> actions = new ArrayList<>();
         for (String s: command.split("")) {
-            actions.add(Action.valueOf(s));
+            try {
+                Action action = Action.valueOf(s);
+                actions.add(action);
+            } catch (IllegalArgumentException exception) {
+                throw new IllegalArgumentException("Invalid action");
+            }
         }
 
         return actions;

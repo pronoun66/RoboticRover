@@ -1,13 +1,3 @@
-/*
- * Copyright 2015-2018 the original author or authors.
- *
- * All rights reserved. This program and the accompanying materials are
- * made available under the terms of the Eclipse Public License v2.0 which
- * accompanies this distribution and is available at
- *
- * http://www.eclipse.org/legal/epl-v20.html
- */
-
 package com.snooper.service;
 
 import com.snooper.constant.Action;
@@ -16,12 +6,10 @@ import com.snooper.dto.Coordinate;
 import com.snooper.dto.Plateau;
 import com.snooper.dto.RoboticRover;
 import com.snooper.exception.OutOfBoundaryException;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 
 import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -30,7 +18,8 @@ class PlateauNavigationImplTests {
 	PlateauNavigationImpl plateauNavigationImpl = new PlateauNavigationImpl();
 
 	@Test
-	void plateauNavigationImplHappyCase() {
+	@DisplayName("plateauNavigationImpl happy path")
+	void plateauNavigationImplHappyPath() {
 		Plateau plateau = new Plateau(0, 0, 5, 5);
 		RoboticRover roboticRover = new RoboticRover(new Coordinate(0, 0), Direction.N);
 
@@ -46,6 +35,7 @@ class PlateauNavigationImplTests {
 	}
 
 	@Test
+	@DisplayName("plateauNavigationImpl should throw OutOfBoundaryException when robot is over plateau's boundary")
 	void plateauNavigationShouldThrowOutOfBoundaryException() {
 		Plateau plateau = new Plateau(0, 0, 1, 1);
 		RoboticRover roboticRover = new RoboticRover(new Coordinate(0, 0), Direction.N);
