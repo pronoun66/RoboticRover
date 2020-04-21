@@ -6,11 +6,12 @@ A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This pl
 See full requirement in [link](Mars%20rover.docx)
 
 ## Prerequisites
+ - Kotlin 1.3
  - Java 8
  - Gradle 6.3
 
 ## Build
-Main application [Application](src/main/java/com/snooper/Application.java)
+Main application [Application.kt](src/main/java/com/snooper/Application.kt)
 
 ```
 $ gradle build
@@ -22,7 +23,7 @@ $ gradle test
 ```
 
 ### Unit tests [link](src/test/java/com/snooper/service)  
-### Integration tests [link](src/test/java/com/snooper/ApplicationIntTests.java)
+### Integration tests [link](src/test/java/com/snooper/ApplicationIntegrationTests.kt)
 
 ![test result](test-result.png)
 
@@ -32,8 +33,4 @@ In `src` folder
 `/constant` enum types  
 `/dto` models  
 `/exception` exceptions  
-`/service` logic implementation  
-
-
-## TODO
-1. Add more integration edge case tests
+`/service` logic implementation
