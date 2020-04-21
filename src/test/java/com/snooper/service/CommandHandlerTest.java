@@ -120,7 +120,6 @@ class CommandHandlerTest {
 		Exception exception = assertThrows(IllegalArgumentException.class, () ->
 				commandHandler.parseActions(null)
 		);
-		assertTrue(exception.getMessage().contains("actions"));
 	}
 
 	@Test
