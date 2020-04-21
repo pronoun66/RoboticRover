@@ -23,7 +23,6 @@ class Application {
 
         // Each command set includes roboticRover and actions
         val commandSets: MutableList<Array<String>> = ArrayList()
-
         var i = 1
         while (i < commands.size) {
             commandSets.add(arrayOf(commands[i], commands[i + 1]))
