@@ -11,7 +11,7 @@ See full requirement in [link](Mars%20rover.docx)
  - Gradle 6.3
 
 ## Build
-Main application [Application](src/main/java/com/snooper/Application.kt)
+Main application [Application.kt](src/main/java/com/snooper/Application.kt)
 
 ```
 $ gradle build
