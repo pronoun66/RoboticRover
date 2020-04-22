@@ -57,6 +57,16 @@ class Application {
         @JvmStatic
         fun main(args: Array<String>) {
             val application = Application()
+            val input = """
+                        5 5
+                        1 2 N
+                        LMLMLMLMM
+                        3 3 E
+                        MMRMMRMRRM
+                        """.trimIndent()
+            println("=== Input ===")
+            println(input)
+            println("=== Output ===")
             println(application.roboticRoverNavigatePlateau(
                     """
                         5 5
@@ -64,12 +74,6 @@ class Application {
                         LMLMLMLMM
                         3 3 E
                         MMRMMRMRRM
-                        0 0 S
-                        M
-                        1 1 W
-                        M
-                        2 2 N
-                        M
                         """.trimIndent()
             ))
         }
